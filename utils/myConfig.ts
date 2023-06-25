@@ -1,1 +1,1 @@
-export const serverURL = "http://10.181.102.153:22950"
+export const serverURL = "https://fluffy-gecko-97.telebit.io/"
