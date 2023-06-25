@@ -59,15 +59,6 @@
         </v-container>
       </v-col>
     </v-row>
-    <v-row>
-      <v-card>
-        <v-card-text>
-          
-        Last recieved SSE {{ sseData }}
-        {{ availableRobots }}
-        </v-card-text>
-      </v-card>
-    </v-row>
   </v-app>
 </template>
 
