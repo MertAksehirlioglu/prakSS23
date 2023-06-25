@@ -116,7 +116,14 @@ async function submitOrder() {
     return
   }
   loading.value = true
-  const postRequest = await axios.post(serverURL + "/sendOrder", { itemName: itemName, customerName: customerName })
+  let postRequest
+  try {
+    postRequest = await axios.post(serverURL + "/sendOrder", { itemName: itemName, customerName: customerName })
+  } catch (error) {
+    activateSnackbar("Connection to server failed")
+    loading.value = false
+    return
+  }
   loading.value = false
 
   if (postRequest.data) {
