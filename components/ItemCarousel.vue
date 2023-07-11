@@ -2,14 +2,23 @@
   <div class="px-5">
     <v-row >
         <v-btn-toggle v-model="toggle_exclusive" style="overflow-x:auto; white-space: nowrap;">
-        <v-btn v-for="value in props.items" @click="emit('update:modelValue',value.name)" height="250px">
-          <ItemCard  :name="value.name" :image_link="value.image_link"/>
-        </v-btn>
-    </v-btn-toggle>
+          <v-btn v-for="value in props.items" height="250px">
+            <ItemCard  :name="value.name" :image_link="value.image_link"/>
+          </v-btn>
+         </v-btn-toggle>
 
     </v-row>
     <v-row class="pb-10">
-        Selected Item: {{ modelValue }}
+      <v-col align="right">
+        <h2>
+        Selected Item:
+      </h2>
+      </v-col>
+      <v-col>
+        <h2>
+          {{ modelValue }}
+        </h2>
+      </v-col>
     </v-row>
   </div>
 </template>
@@ -21,11 +30,13 @@ const props = defineProps<{
   modelValue: string,
   items: MenuItem[]
 }>()
-
+let emit = defineEmits(['update:modelValue']);
 const toggle_exclusive = ref()
 
-
-let emit = defineEmits(['update:modelValue']);
+watch(toggle_exclusive, (newToggle) => {
+  
+  emit('update:modelValue', (newToggle!=undefined) ? props.items.at(newToggle)?.name : "")
+})
 
 
 </script>
