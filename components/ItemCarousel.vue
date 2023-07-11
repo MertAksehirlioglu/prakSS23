@@ -1,4 +1,5 @@
 <template>
+  <div class="px-5">
     <v-row >
         <v-btn-toggle v-model="toggle_exclusive" style="overflow-x:auto; white-space: nowrap;">
         <v-btn v-for="value in props.items" @click="emit('update:modelValue',value.name)" height="250px">
@@ -10,6 +11,7 @@
     <v-row class="pb-10">
         Selected Item: {{ modelValue }}
     </v-row>
+  </div>
 </template>
 
 <script setup lang="ts">
