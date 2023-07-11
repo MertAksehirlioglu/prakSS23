@@ -1,7 +1,7 @@
 <template>
   <div class="px-5">
     <v-row >
-        <v-btn-toggle v-model="toggle_exclusive" style="overflow-x:auto; white-space: nowrap;">
+        <v-btn-toggle v-model="toggle_exclusive" style="overflow-x:auto; white-space: nowrap;" @update:model-value="emit('update:modelValue', toggle_exclusive ? props.items.at(toggle_exclusive)?.name : '')">
           <v-btn v-for="value in props.items" height="250px">
             <ItemCard  :name="value.name" :image_link="value.image_link"/>
           </v-btn>
@@ -31,12 +31,8 @@ const props = defineProps<{
   items: MenuItem[]
 }>()
 let emit = defineEmits(['update:modelValue']);
-const toggle_exclusive = ref()
 
-watch(toggle_exclusive, (newToggle) => {
-  
-  emit('update:modelValue', (newToggle!=undefined) ? props.items.at(newToggle)?.name : "")
-})
+const toggle_exclusive = ref()
 
 
 </script>

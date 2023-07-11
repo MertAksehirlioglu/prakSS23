@@ -10,8 +10,10 @@
         
       </v-card>
       </v-row>
-      <v-row>
-      <div>    {{ props.name }}</div>
+      <v-row >
+        <v-col align="center">
+          {{ props.name }}
+        </v-col>
     </v-row>
       </v-hover>
   </div>
