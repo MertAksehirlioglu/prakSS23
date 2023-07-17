@@ -15,3 +15,4 @@ logs
 # Local env files
 .env.*
 !.env.example
+orderApp.env
