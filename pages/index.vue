@@ -82,12 +82,12 @@ const loading = ref(false)
 const snackbar = ref(false)
 const snackbarText = ref("Test")
 const timeout = ref(10000)
-const availableRobots = ref(1)
+const availableRobots = ref(0)
 const ordersState = ref()
 const orders = ref()
 
 const readyToOrder = computed(() => {
-  return availableRobots.value > 0
+  return availableRobots.value > 0 
 })
 
 
