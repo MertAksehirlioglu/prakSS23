@@ -132,7 +132,11 @@ function activateSnackbar(alertText: string) {
 }
 
 async function refreshState() {
-  await axios.get(serverURL + "/getState")
+  try {
+    await axios.get(serverURL + "/getState")
+  } catch (error) {
+    activateSnackbar("Server not Responding")
+  }
   lastRefresh.value = getNow()
 }
 
