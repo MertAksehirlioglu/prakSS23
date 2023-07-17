@@ -5,9 +5,9 @@
       <v-app-bar-title>Robo Cocktail</v-app-bar-title>
 
       <template v-slot:append>
-        <p>Items were last refreshed in {{ lastItemRefresh }}</p>
-        <v-btn @click="refreshItems">
-          Refresh Items
+        <p>State was last refreshed in {{ lastRefresh }}</p>
+        <v-btn @click="refreshState">
+          Refresh State
         </v-btn>
       </template>
     </v-app-bar>
@@ -76,7 +76,7 @@ const sseData = ref("")
 const customerName = ref("")
 const itemName = ref("")
 const menuItems = ref<MenuItem[]>([])
-const lastItemRefresh = ref()
+const lastRefresh = ref()
 const ready = ref(true)
 const loading = ref(false)
 const snackbar = ref(false)
@@ -131,15 +131,9 @@ function activateSnackbar(alertText: string) {
   snackbarText.value = alertText
 }
 
-async function refreshItems() {
-  try {
-    menuItems.value = (await axios.get(serverURL + "/getItems")).data as MenuItem[]
-  } catch (error) {
-    console.error(error)
-    console.log("using mock drinks")
-    menuItems.value = drinksList
-  }
-  lastItemRefresh.value = getNow()
+async function refreshState() {
+  await axios.get(serverURL + "/getState")
+  lastRefresh.value = getNow()
 }
 
 onMounted(async () => {
@@ -149,7 +143,9 @@ onMounted(async () => {
     parseSSE(JSON.parse(e.data))
     console.log(sseData.value)
   }
-  await refreshItems()
+
+
+  await refreshState()
 
 })
 
@@ -157,6 +153,7 @@ function parseSSE(sse: any) {
   availableRobots.value = sse.waitingCallbacks
   ordersState.value = sse.currentState
   orders.value = jsonToListArray(sse.orders, availableRobots.value)
+  menuItems.value = sse.availableItems
   console.log(sse.orders)
   console.log(orders.value)
 }
