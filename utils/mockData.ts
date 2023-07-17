@@ -53,7 +53,6 @@ export const drinksList = [
       image_link: "https://www.liquor.com/thmb/M-GNu7ThtQYthNG5_7Rnu6VmfeQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc()/gin-fizz-720x720-primary-v3-2c1390963d014e35a01d741df2f9ae77.jpg"
     }
   ]
-
   export type Order = {
     itemName: string;
     customerName: string;
