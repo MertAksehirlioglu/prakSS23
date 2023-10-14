@@ -6,10 +6,10 @@
     "module": true,
     "resourceType": "script"
   },
-  "/Users/mertaksehirlioglu/Desktop/prak/orderApp/node_modules/nuxt/dist/app/entry.js": {
+  "/Users/mertaksehirlioglu/Desktop/prak/prakSS23BPM/orderApp/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "isEntry": true,
-    "file": "/Users/mertaksehirlioglu/Desktop/prak/orderApp/node_modules/nuxt/dist/app/entry.js"
+    "file": "/Users/mertaksehirlioglu/Desktop/prak/prakSS23BPM/orderApp/node_modules/nuxt/dist/app/entry.js"
   }
 }

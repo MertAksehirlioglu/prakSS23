@@ -1,5 +1,5 @@
 
-import { defuFn } from '/Users/mertaksehirlioglu/Desktop/prak/orderApp/node_modules/defu/dist/defu.mjs'
+import { defuFn } from '/Users/mertaksehirlioglu/Desktop/prak/prakSS23BPM/orderApp/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {}
 
