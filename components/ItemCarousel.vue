@@ -1,7 +1,7 @@
 <template>
   <div class="px-5">
     <v-row >
-        <v-btn-toggle v-model="toggle_exclusive" style="overflow-x:auto; white-space: nowrap;" @update:model-value="emit('update:modelValue', toggle_exclusive ? props.items.at(toggle_exclusive)?.name : '')">
+        <v-btn-toggle v-model="toggle_exclusive" style="overflow-x:auto; white-space: nowrap;" @update:model-value="emit('update:modelValue', toggle_exclusive>=0 ? props.items.at(toggle_exclusive)?.name : '')">
           <v-btn v-for="value in props.items" height="250px">
             <ItemCard  :name="value.name" :image_link="value.image_link"/>
           </v-btn>

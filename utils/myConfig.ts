@@ -1,1 +1,1 @@
-export const serverURL = "https://fluffy-gecko-97.telebit.io"
+export const serverURL = "https://lehre.bpm.in.tum.de/ports/22950"

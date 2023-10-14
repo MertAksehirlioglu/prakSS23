@@ -110,6 +110,8 @@ async function submitOrder() {
   let postRequest
   try {
     postRequest = await axios.post(serverURL + "/sendOrder", { itemName: itemName, customerName: customerName })
+    customerName.value = ""
+    itemName.value = ""
   } catch (error) {
     activateSnackbar("Connection to server failed")
     loading.value = false
