@@ -1,1 +1,1 @@
-export { default } from "file:///Users/mertaksehirlioglu/Desktop/prak/prakSS23BPM/orderApp/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
+export { default } from "file:///Users/mertaksehirlioglu/Desktop/prak/prakSS23BPM/client/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
