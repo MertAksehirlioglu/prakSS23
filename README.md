@@ -1,3 +1,30 @@
+# Ordering Client
+
+The Vue.js client is the user interface for customers, allowing them to place orders remotely and receive real-time updates on their orders. It displays the status of orders in the sidebar. To place an order, the user should enter their name, select their drink, and click on the 'Submit Order' button.
+
+## Features
+
+The Vue.js client offers the following features:
+
+- **Order Placing:** Customers can place orders remotely using HTTP GET and POST requests to specific endpoints.
+- **Real-time Updates:** The client receives real-time updates on the status of their orders through Server-Sent Events (SSE).
+
+## Technologies Used
+
+The client is built using the following technologies:
+
+- [**Vue.js**](https://vuejs.org/): A progressive JavaScript framework for building user interfaces.
+- [**Nuxt.js**](https://nuxtjs.org/): A higher-level framework for Vue.js that simplifies application setup.
+- [**axios**](https://axios-http.com/): A JavaScript library for making HTTP requests.
+
+## Project Structure
+
+The project's directory structure is as follows:
+
+- **components:** Contains Vue.js components used in the client.
+- **layouts:** Define the main layout of the application.
+- **utils:** Contains utility functions for the project, including functions to parse Server-Sent Events (SSE) data and handle snackbar messages.
+
 ## Setup
 
 Make sure to install the dependencies:
