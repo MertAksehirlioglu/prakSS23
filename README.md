@@ -1,6 +1,6 @@
 # Ordering Client
 
-The Vue.js client is the user interface for customers, allowing them to place orders remotely and receive real-time updates on their orders. It displays the status of orders in the sidebar. To place an order, the user should enter their name, select their drink, and click on the 'Submit Order' button.
+The Vue.js client is the user interface for customers, allowing them to place orders remotely and receive real-time updates on their orders. It displays the status of orders in the sidebar. To place an order, the user should enter their name, select their drink, and click on the 'Submit Order' button. For more details, please refer to the screenshot at the end.
 
 
 ## Features
