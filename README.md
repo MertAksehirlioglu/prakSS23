@@ -2,6 +2,7 @@
 
 The Vue.js client is the user interface for customers, allowing them to place orders remotely and receive real-time updates on their orders. It displays the status of orders in the sidebar. To place an order, the user should enter their name, select their drink, and click on the 'Submit Order' button.
 
+
 ## Features
 
 The Vue.js client offers the following features:
@@ -58,3 +59,10 @@ LOCAL_BUILD_DIR=".output/public"
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+## Screenshots
+
+<img width="1440" alt="User interface in case the system is available for next order" src="https://github.com/MertAksehirlioglu/prakSS23/assets/23525970/26a7bc94-3728-46b8-a16b-4ab0db4fa654">
+
+<img width="1440" alt="User interface in case the system is busy with current orders" src="https://github.com/MertAksehirlioglu/prakSS23/assets/23525970/bb874eb4-c230-4fd8-9359-85f0d59c8158">
