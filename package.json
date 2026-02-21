@@ -9,9 +9,12 @@
     "postinstall": "nuxt prepare",
     "deploy": "./deployRemote.sh"
   },
+  "engines": {
+    "node": ">=24.x"
+  },
   "devDependencies": {
     "@nuxt/devtools": "^3.2.1",
-    "@types/node": "^18",
+    "@types/node": "^24",
     "nuxt": "^3.21.1"
   },
   "dependencies": {
